@@ -309,6 +309,15 @@ header li > a {
   border-radius: var(--percent50);
 }
 
+/* mega Menu */
+.mega .flexcol {
+  flex: 1;
+  min-width: 180px;
+  padding-right: 2.5em;
+  margin-bottom: 1.5em;
+  z-index: 1;
+}
+
 /* -----------
 Header End
 ----------- */
@@ -341,5 +350,54 @@ Responsive
 
   .header-nav .right li > a {
     margin-left: 1em;
+  }
+
+  /* mega menu */
+  nav .mega {
+    position: absolute;
+    width: var(--percent100);
+    height: auto;
+    top: auto;
+    left: 0;
+    right: 0;
+    padding: 2.5em;
+    line-height: 2em;
+    background-color: var(--light-bg-color);
+    box-shadow: rgb(0 0 0 / 20%) 0 30px 20px -30px;
+    z-index: 100;
+  }
+
+  nav .mega .wrapper {
+    display: flex;
+  }
+
+  nav .mega h4 {
+    font-size: 0.8em;
+    text-transform: uppercase;
+  }
+
+  nav .mega ul {
+    font-size: var(--font-small);
+  }
+
+  nav .mega .women-brands {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 180px;
+  }
+
+  nav .mega .women-brands li {
+    min-width: 80px;
+  }
+
+  nav .mega .view-all {
+    margin-top: 1em;
+  }
+
+  nav .mega .products {
+    flex: 2;
+    padding: 0;
+    align-items: center;
+    position: relative;
   }
 }
