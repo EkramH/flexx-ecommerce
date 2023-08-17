@@ -233,6 +233,11 @@ Reusable selector start
   gap: 1em;
   transition: var(--trans-color);
 }
+
+.mini-text {
+  font-size: var(--font-smaller);
+  color: var(--light-text-color);
+}
 /* ------- 
 Reusable selector End
 -------*/
@@ -374,13 +379,94 @@ header li > a {
   border-radius: var(--percent50);
 }
 
-/* mega Menu */
+/* Header mega Menu */
 .mega .flexcol {
   flex: 1;
   min-width: 180px;
   padding-right: 2.5em;
   margin-bottom: 1.5em;
   z-index: 1;
+}
+
+/* Header Department Category Menu */
+.header-main {
+  background-color: var(--secondary-dark-color);
+  padding: 1.5em 0;
+  margin-bottom: 2em;
+}
+
+.dpt-cat {
+  position: relative;
+  z-index: 10;
+}
+
+.dpt-cat .dpt-head {
+  position: relative;
+  width: 300px;
+  padding: 0.75em 1.5em;
+  background-color: var(--primary-color);
+  border-radius: 7px 7px 0 0;
+  color: var(--white-color);
+  margin-bottom: -2.15em;
+}
+
+.dpt-cat .dpt-head .mini-text {
+  color: var(--light-bg-color);
+}
+
+.dpt-cat .dpt-trigger {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 1.3em;
+  height: 60px;
+  width: 60px;
+}
+
+/* Header Search bar */
+.header-main .right {
+  flex: 1;
+}
+
+form {
+  position: relative;
+}
+
+form.search input {
+  line-height: 3.25em;
+  padding: 0 7em 0 4.5em;
+  border: none;
+  outline: none;
+  width: var(--percent100);
+  border-radius: 7px;
+  font-size: 0.9em;
+  font-weight: var(--fw3);
+}
+
+form.search :where(span, button) {
+  position: absolute;
+  top: 0;
+  padding: 0.55em 1.5em;
+  font-size: 1em;
+  color: var(--light-text-color);
+  height: var(--percent100);
+}
+
+form.search button {
+  right: 0;
+  border: none;
+  outline: none;
+  font-size: 0.875em;
+  font-weight: var(--fw6);
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  border-radius: 0 7px 7px 0;
+  cursor: pointer;
+  transition: var(--trans-background);
+}
+
+form.search button:hover {
+  background-color: var(--dark-color);
 }
 
 /* -----------
@@ -496,5 +582,10 @@ Responsive
     font-weight: var(--fw8);
     text-align: center;
     color: var(--secondary-dark-color);
+  }
+
+  .header-main .right {
+    max-width: 600px;
+    margin-left: auto;
   }
 }
