@@ -588,8 +588,12 @@ form.search button:hover {
   display: none;
 }
 
+.off-canvas nav ul a {
+  align-items: center;
+}
+
 .off-canvas .has-child .icon-small {
-  padding: 0.5em;
+  padding: 0 0.5em;
   line-height: initial;
 }
 
