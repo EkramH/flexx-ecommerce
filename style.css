@@ -491,6 +491,16 @@ form.search button:hover {
   background-color: var(--white-color);
   overflow-y: auto;
   z-index: 1000;
+  transform: translateX(-100%);
+  visibility: hidden;
+  transition: transform 0.4s, visibility 0.4s;
+  will-change: transform, visibility;
+}
+
+.showmenu .site-off {
+  transform: translateX(0);
+  visibility: visible;
+  transform: transform 0.4s 0s, visibility 0s 0s;
 }
 
 .off-canvas {
@@ -553,6 +563,10 @@ form.search button:hover {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.off-canvas .expand > :where(ul, .mega) {
+  max-height: 2000px;
 }
 
 .off-canvas .thetop-nav ul,
@@ -788,8 +802,8 @@ Responsive
     bottom: 0;
     background: linear-gradient(
       90deg,
-      rgba(225, 225, 255, 1) 0%,
-      rgba(255, 255, 255, 0) 100%
+      rgb(225 225 255) 0%,
+      rgb(10 2 28 / 24%) 100%
     );
   }
 

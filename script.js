@@ -17,3 +17,29 @@ function copyMenu() {
 }
 
 copyMenu();
+
+// Show mobile menu
+const menuButton = document.querySelector(".trigger");
+const closeButton = document.querySelector(".t-close");
+const addClass = document.querySelector(".site");
+
+menuButton.addEventListener("click", function () {
+  addClass.classList.toggle("showmenu");
+});
+
+closeButton.addEventListener("click", function () {
+  addClass.classList.remove("showmenu");
+});
+
+// Show sub menu on mobile
+const subMenu = document.querySelectorAll(".has-child .icon-small");
+subMenu.forEach((menu) => menu.addEventListener("click", toggle));
+
+function toggle(e) {
+  e.preventDefault();
+  subMenu.forEach((item) =>
+    item != this ? item.closest(".has-child").classList.remove("expand") : null
+  );
+  if (this.closest(".has-child").classList != "expand");
+  this.closest(".has-child").classList.toggle("expand");
+}
