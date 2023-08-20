@@ -43,3 +43,13 @@ function toggle(e) {
   if (this.closest(".has-child").classList != "expand");
   this.closest(".has-child").classList.toggle("expand");
 }
+
+// Swipper
+const swiper = new Swiper(".swiper", {
+  loop: true,
+
+  // pagination
+  pagination: {
+    el: ".swiper-pagination",
+  },
+});
