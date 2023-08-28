@@ -717,7 +717,7 @@ Header End
   justify-content: space-between;
   padding-bottom: 0.5em;
   margin-bottom: 2em;
-  border-radius: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
 }
 
 .sectop h2 {
@@ -882,7 +882,7 @@ Header End
 }
 
 .products .price .current {
-  font-size: calc(1em + 1vw);
+  font-size: calc(1em + 0.5vw);
   color: var(--primary-color);
   margin-right: 0.25em;
 }
@@ -939,6 +939,7 @@ Header End
 .products.mini .content {
   margin: 0;
   gap: 0.75em;
+  height: 160px;
 }
 
 .products:where(.mini, .main) h3 {
