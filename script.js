@@ -47,6 +47,11 @@ function toggle(e) {
 // Swipper
 const swiper = new Swiper(".swiper", {
   loop: true,
+  autoplay: {
+    delay: 3500,
+    disableOnInteraction: false,
+  },
+  speed: 3000,
 
   // pagination
   pagination: {
