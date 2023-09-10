@@ -1112,6 +1112,13 @@ Header End
   width: var(--percent100);
 }
 
+/* **--- Widgets ---** */
+
+.widgets {
+  padding: 3.5em 2.5em;
+  background-color: var(--light-bg-color);
+}
+
 /* ----------- ***
  Footer End
 *** ----------- */
@@ -1132,7 +1139,8 @@ Responsive
   }
 
   .products.mini,
-  .banner .row {
+  .banner .row,
+  .widgets .row {
     flex: 0 0 50%;
   }
 
@@ -1344,7 +1352,8 @@ Responsive
     max-height: 371px;
   }
 
-  .products.main .item {
+  .products.main .item,
+  .widgets .row {
     flex: 0 0 25%;
   }
 
